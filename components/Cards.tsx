@@ -104,10 +104,10 @@ const Cards: React.FC<CardsProps> = ({
       </div>
 
       <div
-        className={`absolute text-black inset-0 -mt-10 -ml-5 h-80 bg-gray-50 flex flex-col items-center justify-center p-4 z-20 border border-gray-300 rounded-2xl shadow-lg transition-all duration-300 ease-in-out ${
+        className={`absolute text-black w-[105%] inset-0 -mt-10 -ml-2 md:-ml-3 md:mx-1 h-80 bg-gray-50 flex flex-col items-center justify-center p-4 z-20 border border-gray-300 rounded-2xl shadow-lg transition-all duration-300 ease-in-out ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}
-        style={{ width: "110%", pointerEvents: isOpen ? "auto" : "none" }}
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <button
           onClick={onTogglePopup}

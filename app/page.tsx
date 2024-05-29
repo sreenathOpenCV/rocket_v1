@@ -25,7 +25,7 @@ export default function Home() {
   const [systemError, setSystemError] = useState(false);
   const [openPopupIndex, setOpenPopupIndex] = useState<number | null>(null);
 
-  const handleTogglePopup = (index: number) => {
+  const handleTogglePopup = (index: any) => {
     setOpenPopupIndex(openPopupIndex === index ? null : index);
   };
 
@@ -60,6 +60,10 @@ export default function Home() {
       setItems(paramData.items);
     }
   }, [paramData]);
+
+  useEffect(() => {
+    handleTogglePopup(null)
+  }, [page]);
 
   return (
     <main className="relative text-[#1e1e1e] flex min-h-screen w-full justify-center bg-white text-center">
